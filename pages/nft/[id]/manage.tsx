@@ -58,7 +58,7 @@ export default function ManageNFTView() {
     try {
       if (revenues.length == 1) {
         release(provider, revenues[0].id).then(() => {
-          router.push("/my-nfts");
+          router.push("/my-nfts", null, {scroll: false});
         });
       } else {
         release(provider, revenueToClaim).then(() => {
